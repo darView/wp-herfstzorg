@@ -159,3 +159,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Register Custom Navigation Walker
+if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
+    // file does not exist... return an error.
+    return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+} else {
+    // file exists... require it.
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
