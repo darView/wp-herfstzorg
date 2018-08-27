@@ -19,9 +19,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/eju4phm.css">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/animate.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/animate.css">
 
 	<?php wp_head(); ?>
 
@@ -38,7 +38,7 @@
     <nav id="mainNavbar" class="navbar sticky-top navbar-expand-sm mb-2">
 
         <a class="navbar-brand" href="/index.html">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/navbar_logo.jpg" alt="HerfstZorg"/>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/navbar_logo.jpg" alt="HerfstZorg"/>
         </a>
 
         <button class="navbar-toggler"
