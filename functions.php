@@ -43,9 +43,11 @@ if ( ! function_exists( 'wp_herfstzorg_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'wp-herfstzorg' ),
-		) );
+        register_nav_menus(array(
+            'primary' => esc_html__( 'Primary', 'wp-herfstzorg' ),
+            'footer' => esc_html__( 'Footer', 'wp-herfstzorg' ),
+            'social' => esc_html__( 'Social', 'wp-herfstzorg' ),
+        ));
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -159,11 +161,20 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// Register Custom Navigation Walker
+// Register Custom Bootstrap Navigation Walker
 if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
     // file does not exist... return an error.
     return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
 } else {
     // file exists... require it.
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+
+// Register Custom Social Navigation Walker
+if ( ! file_exists( get_template_directory() . '/class-wp-social-navwalker.php' ) ) {
+    // file does not exist... return an error.
+    return new WP_Error( 'class-wp-social-navwalker-missing', __( 'It appears the class-wp-social-navwalker.php file may be missing.', 'wp-social-navwalker' ) );
+} else {
+    // file exists... require it.
+    require_once get_template_directory() . '/class-wp-social-navwalker.php';
 }

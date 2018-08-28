@@ -471,18 +471,18 @@ footer .information p {
 	white-space: nowrap; }
 footer .information .fa {
 	font-size: 20px; }
-footer .information .information-links {
+footer .information ul {
 	list-style: none;
 	padding: 0; }
-footer .information .information-links li a:link,
-footer .information .information-links li a:visited {
+footer .information li a:link,
+footer .information li a:visited {
 	text-decoration: none;
 	border: 0;
 	color: #888;
 	transition: 0.2s; }
-footer .information .information-links li a:hover {
+footer .information li a:hover {
 	color: #a51915; }
-footer .information .information-links li.active a {
+footer .information li.current-menu-item a {
 	color: #a51915; }
 
 /** COPYRIGHT AREAY */

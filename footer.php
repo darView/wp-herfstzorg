@@ -24,22 +24,30 @@
                     <div class="col">
                         <p class="text-uppercase">Volg ons</p>
                         <hr/>
-                        <div class="clearfix">
-                            <ul class="social-links float-left">
-                                <li>
-                                    <a href="https://www.facebook.com/HerfstZorg/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Volg ons op Facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/herfstzorg" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Volg ons op Twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/company/herfstzorg/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Volg ons op LinkedIn"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/herfstzorg/" TARGET="_blank"><i class="fa fa-instagram" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Volg ons op Instagram"></i></a>
-                                </li>
-                            </ul>
-                        </div>
+                        <?php
+                        wp_nav_menu([
+                            'theme_location'    => 'social',
+                            'container_class'   => 'clearfix',
+                            'menu_class'        => 'social-links float-left',
+                            'walker'            =>  new WP_Social_Navwalker()
+                        ]);
+                        ?>
+                        <!--<div class="clearfix">-->
+                        <!--    <ul class="social-links float-left">-->
+                        <!--        <li>-->
+                        <!--            <a href="https://www.facebook.com/HerfstZorg/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Volg ons op Facebook"></i></a>-->
+                        <!--        </li>-->
+                        <!--        <li>-->
+                        <!--            <a href="https://twitter.com/herfstzorg" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Volg ons op Twitter"></i></a>-->
+                        <!--        </li>-->
+                        <!--        <li>-->
+                        <!--            <a href="https://www.linkedin.com/company/herfstzorg/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Volg ons op LinkedIn"></i></a>-->
+                        <!--        </li>-->
+                        <!--        <li>-->
+                        <!--            <a href="https://www.instagram.com/herfstzorg/" TARGET="_blank"><i class="fa fa-instagram" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Volg ons op Instagram"></i></a>-->
+                        <!--        </li>-->
+                        <!--    </ul>-->
+                        <!--</div>-->
                     </div>
                 </div>
             </div>
@@ -52,41 +60,21 @@
                         <p class="text-uppercase">Informatie</p>
                         <hr/>
                         <div class="row">
-                            <div class="col col-sm-12 col-md-6">
-                                <ul class="information-links">
-                                    <li class="active">
-                                        <a href="/index.html">Particuliere mantelzorg</a>
-                                    </li>
-                                    <li>
-                                        <a href="/about.html">Over ons</a>
-                                    </li>
-                                    <li>
-                                        <a href="/pricing.html">Tarieven</a>
-                                    </li>
-                                    <li>
-                                        <a href="/vacancies.html">Vacatures</a>
-                                    </li>
-                                    <li>
-                                        <a href="/contact.html">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col col-sm-12 col-md-6">
-                                <ul class="information-links">
-                                    <!--li>
-                                        <a href="#">Nieuws</a>
-                                    </li-->
-                                    <li>
-                                        <a href="/privacy-statement.html">Privacy verklaring</a>
-                                    </li>
-                                    <li>
-                                        <a href="/terms-and-conditions.html">Algemene voorwaarden</a>
-                                    </li>
-                                </ul>
-                            </div>
 
+                            <?php
+                                wp_nav_menu([
+                                    'theme_location' => 'primary',
+                                    'container_class' => 'col col-sm-12 col-md-6'
+                                ]);
+                            ?>
 
-                            </ul>
+                            <?php
+                                wp_nav_menu([
+                                    'theme_location' => 'footer',
+                                    'container_class' => 'col col-sm-12 col-md-6'
+                                ]);
+                            ?>
+
                         </div>
                     </div>
                 </div>
@@ -96,22 +84,9 @@
 
 </footer>
 
-<section id="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 text-white">
-                <span class="copyright">Copyright &copy; 2018 HerfstZorg</span>
-                |
-                <span class="website"> Website door <a href="http://www.darview.com" target="_blank" data-toggle="tooltip" data-placement="top" title="Bezoek de website van darView (opent in een nieuw tabblad)">darView</a></span>
-            </div>
-            <div class="col-sm-6 text-white text-capitalize">
-                <!--span class="disclaimer"><a href="#">disclaimer</a></span>
-                |
-                <span class="sitemap"><a href="#">sitemap</a></span-->
-            </div>
-        </div>
-    </div>
-</section>
+<?php get_template_part('template-parts/content-copyright', 'copyright'); ?>
+
+
 
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.min.js"></script>
 <!--<script src="<?php bloginfo('template_directory'); ?>/assets/js/loadCSS.min.js"></script>-->
