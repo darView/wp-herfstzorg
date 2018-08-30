@@ -1,6 +1,6 @@
 <nav id="mainNavbar" class="navbar sticky-top navbar-expand-sm mb-2">
 
-    <a class="navbar-brand" href="/index.html">
+    <a class="navbar-brand" href="/">
         <img src="<?php bloginfo('template_directory'); ?>/assets/img/navbar_logo.jpg" alt="HerfstZorg"/>
     </a>
 

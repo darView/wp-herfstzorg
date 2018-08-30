@@ -12,8 +12,7 @@ $home_icons_heading_3       = get_field('home_icons_heading_3');
 $home_icons_lead_3          = get_field('home_icons_lead_3');
 
 ?>
-<div class="container">
-    <h1 class="js-wp js-wp-title h1 py-5 text-center"><?php single_post_title(); ?></h1>
+
 <!-- HOME ICON SECTION -->
 <section id="home-icons" class="mb-5">
     <div class="row">

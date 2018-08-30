@@ -366,7 +366,14 @@ body {
 	width: 100%;
 	height: 100%; }
 
+#text-round-image ul {
+	margin-top: -1rem;
+}
+
 .head {
+	font-weight: bold; }
+
+.strong {
 	font-weight: bold; }
 
 /** NAVIGATION BAR SECTION */
@@ -598,17 +605,17 @@ footer .information li.current-menu-item a {
 	transition: 0.2s;
 	color: #a51915; }
 
-#pricing .image {
+#text-round-image .image {
 	width: 14rem;
 	border-radius: 50%;
 	transition: 0.5s; }
 
-#pricing a {
+#text-round-image a {
 	color: #fc9407;
 	transition: 0.2s;
 	text-decoration: none; }
 
-#pricing a:hover {
+#text-round-image a:hover {
 	transition: 0.2s;
 	color: #a51915; }
 
