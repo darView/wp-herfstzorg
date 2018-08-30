@@ -97,6 +97,9 @@
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/scripts.min.js"></script>
 
+<?php if ($wp_query->queried_object->post_name == "contact"): ?>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-P0CTfGRjflLFmZKWwbacvk4g1SYXHgA&callback=initMap"></script>
+<?php endif; ?>
 <script>
     <!--$(function ()-->
     <!--{-->

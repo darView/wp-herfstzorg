@@ -85,7 +85,6 @@ get_header();
 
     <!-- GOOGLE MAP -->
     <div id="map"></div>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-P0CTfGRjflLFmZKWwbacvk4g1SYXHgA&callback=initMap"></script>
 
 <?php
 get_footer();
