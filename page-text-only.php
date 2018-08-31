@@ -10,7 +10,7 @@ get_header();
 
     <div class="container">
 
-        <h1 class="js-wp js-wp-title h1 my-5 text-center">Privacy verklaring</h1>
+        <h1 class="js-wp js-wp-title h1 my-5 text-center"><?php single_post_title(); ?></h1>
 
         <?php echo $text_only_text; ?>
 

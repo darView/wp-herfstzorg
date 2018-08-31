@@ -30,7 +30,7 @@ if ( ! class_exists( 'WP_Social_Navwalker' ) ) {
             }
             $output .= sprintf( "\n
                 <li>
-                    <a href='%s' _target='blank'>
+                    <a href='%s' target='_blank'>
                         <i class='%s' aria-hidden='true' data-toggle='tooltip' data-placement='top' title='Volg ons op %s'></i>
                     </a>
                 </li>\n",

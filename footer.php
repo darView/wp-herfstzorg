@@ -98,7 +98,16 @@
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/scripts.min.js"></script>
 
 <?php if ($wp_query->queried_object->post_name == "contact"): ?>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-P0CTfGRjflLFmZKWwbacvk4g1SYXHgA&callback=initMap"></script>
+<script>
+    function initMap()
+    {
+        var location = {lat: <?php echo get_field('google_maps_lat'); ?>, lng: <?php echo get_field('google_maps_lng'); ?>};
+        var map      = new google.maps.Map(
+        document.getElementById('map'), {zoom: 10, center: location});
+        var marker   = new google.maps.Marker({position: location, map: map});
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_field('google_maps_javascript_api'); ?>&callback=initMap"></script>
 <?php endif; ?>
 <script>
     <!--$(function ()-->

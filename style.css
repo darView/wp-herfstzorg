@@ -619,30 +619,26 @@ footer .information li.current-menu-item a {
 	transition: 0.2s;
 	color: #a51915; }
 
-#vacancies .image {
-	width: 14rem;
-	border-radius: 50%;
-	transition: 0.5s; }
-
-#vacancies footer {
-	background-color: white; }
-
-#vacancies img:hover {
+#text-round-image img:hover {
 	transition: 0.5s;
 	transform: scale(0.95); }
 
-#vacancies i {
+#text-round-image footer {
+	background-color: white; }
+
+#text-round-image i {
 	font-size: 1.8rem;
 	margin-right: 0.3rem; }
 
-#vacancies a {
+#text-round-image a {
 	color: #fc9407;
 	transition: 0.2s;
 	text-decoration: none; }
 
-#vacancies a:hover {
+#text-round-image a:hover {
 	transition: 0.2s;
 	color: #a51915; }
+
 
 #home-icons {
 	color: #a51915; }
