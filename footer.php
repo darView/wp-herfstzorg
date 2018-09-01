@@ -86,16 +86,13 @@
 
 <?php get_template_part('template-parts/content-copyright', 'copyright'); ?>
 
-
-
-<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.min.js"></script>
-<!--<script src="<?php bloginfo('template_directory'); ?>/assets/js/loadCSS.min.js"></script>-->
-
-<script src="<?php bloginfo('template_directory'); ?>/assets/js/parallax.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/assets/js/popper.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/assets/js/bootstrap.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/assets/js/scripts.min.js"></script>
+<script src="<?php echo  bloginfo('template_directory'); ?>/assets/js/jquery.min.js"></script>
+<script src="<?php echo bloginfo('template_directory'); ?>/assets/js/parallax.min.js"></script>
+<script src="<?php echo bloginfo('template_directory'); ?>/assets/js/popper.min.js"></script>
+<script src="<?php echo bloginfo('template_directory'); ?>/assets/js/bootstrap.min.js"></script>
+<script src="<?php echo bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script>
+<script src="<?php echo bloginfo('template_directory'); ?>/assets/js/scripts.min.js"></script>
+<script src="<?php echo bloginfo('template_directory'); ?>/assets/js/rpi.bundle.js"></script>
 
 <?php if ($wp_query->queried_object->post_name == "contact"): ?>
 <script>
@@ -109,19 +106,5 @@
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_field('google_maps_javascript_api'); ?>&callback=initMap"></script>
 <?php endif; ?>
-<script>
-    <!--$(function ()-->
-    <!--{-->
-        <!--loadCSS("https://fonts.googleapis.com/css?family=Istok+Web")-->
-        <!--loadCSS("--><?php //bloginfo('template_directory'); ?><!--/assets/css/style.css");-->
-        <!--loadCSS("--><?php //bloginfo('template_directory'); ?><!--/assets/css/font-awesome.min.css");-->
-        <!--loadCSS("--><?php //bloginfo('template_directory'); ?><!--/assets/css/bootstrap.css");-->
-        <!--loadCSS("--><?php //bloginfo('template_directory'); ?><!--/assets/css/style.css");-->
-        <!--loadCSS("--><?php //bloginfo('template_directory'); ?><!--/assets/css/animate.css");-->
-
-        $('parallax-window').parallax();
-    });
-</script>
-
 </body>
 </html>

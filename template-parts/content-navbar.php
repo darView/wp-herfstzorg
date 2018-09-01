@@ -24,4 +24,7 @@
             'walker'            => new WP_Bootstrap_Navwalker(),
         ]);
     ?>
+    <div class="rpi-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="rpi-progress-bar__position" aria-hidden="true"></div>
+    </div>
 </nav>
