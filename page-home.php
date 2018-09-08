@@ -19,6 +19,8 @@ $home_reviews_lead          = get_field('home_reviews_lead')
     <div class="container">
         <h1 class="js-wp js-wp-title h1 py-5 text-center"><?php single_post_title(); ?></h1>
 
+        <div class="js-wp js-wp-about-1 pb-5"><?php the_content(); ?></div>
+
         <?php get_template_part( 'template-parts/content-home-icons', 'home-icons' ); ?>
 
         <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $home_parallax_image['url']; ?>" data-ios-fix="true" data-android-fix="true">
