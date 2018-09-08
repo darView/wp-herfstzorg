@@ -92,7 +92,6 @@
 <script src="<?php echo bloginfo('template_directory'); ?>/assets/js/bootstrap.min.js"></script>
 <script src="<?php echo bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script>
 <script src="<?php echo bloginfo('template_directory'); ?>/assets/js/scripts.min.js"></script>
-<script src="<?php echo bloginfo('template_directory'); ?>/assets/js/rpi.bundle.js"></script>
 
 <?php if ($wp_query->queried_object->post_name == "contact"): ?>
 <script>

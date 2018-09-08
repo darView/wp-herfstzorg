@@ -27,7 +27,7 @@ $carousel_lead_3    = get_field('carousel_lead_3');
                 >
                 <div class="container">
                     <div class="carousel-caption d-none d-sm-block mb-auto">
-                        <h1 class="display-3"><?php echo $carousel_caption_1; ?></h1>
+                        <h2 class="display-3"><?php echo $carousel_caption_1; ?></h2>
                         <p class="lead d-none d-md-inline"><?php echo $carousel_lead_1; ?></p>
                         <!--a href="#cards-section" class="btn btn-primary btn-lg">Kom meer te weten</a-->
                     </div>
@@ -41,7 +41,7 @@ $carousel_lead_3    = get_field('carousel_lead_3');
                 >
                 <div class="container">
                     <div class="carousel-caption d-none d-sm-block mb-auto">
-                        <h1 class="display-3"><?php echo $carousel_caption_2; ?></h1>
+                        <h2 class="display-3"><?php echo $carousel_caption_2; ?></h2>
                         <p class="lead d-none d-md-inline"><?php echo $carousel_lead_2; ?></p>
                         <!--a href="#cards-section" class="btn btn-primary btn-lg">Kom meer te weten</a-->
                     </div>
@@ -55,7 +55,7 @@ $carousel_lead_3    = get_field('carousel_lead_3');
                 >
                 <div class="container">
                     <div class="carousel-caption d-none d-sm-block mb-auto">
-                        <h1 class="display-3"><?php echo $carousel_caption_3; ?></h1>
+                        <h2 class="display-3"><?php echo $carousel_caption_3; ?></h2>
                         <p class="lead d-none d-md-inline"><?php echo $carousel_lead_3; ?></p>
                         <!--a href="#cards-section" class="btn btn-primary btn-lg">Kom meer te weten</a-->
                     </div>

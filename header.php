@@ -12,29 +12,17 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124643036-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-124643036-1');
-    </script>
-
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
     <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/eju4phm.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/animate.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/rpi.bundle.css">
 
 	<?php wp_head(); ?>
-
 
     <!-- HTML5 shiv goes here! -->
     <!-- todo -->

@@ -413,7 +413,7 @@ body {
 #cards-section img {
 	transition: 0.5s; }
 #cards-section .card-body p {
-	max-height: 200px;
+	max-height: 11.5rem;
 	overflow: hidden; }
 #cards-section .card-body a {
 	font-size: small;
@@ -649,12 +649,67 @@ footer .information li.current-menu-item a {
 	text-align: center;
 	color: #fff; }
 
+/* overlay parallax windon on diensten page */
+#diensten .parallax-window {
+	 background-color: rgba(0, 0, 0, .3); }
+
 [data-rpi-area] {
 	background: rgba(165, 25, 21, 0.1); }
 
 .rpi-progress-bar__position {
 	max-height: 1px;
 	overflow: hidden; }
+
+.fadeout {
+	position: relative;
+	margin-top: -8rem;
+	height: 8rem;
+	background: -webkit-linear-gradient(
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 1) 100%
+	);
+	background-image: -moz-linear-gradient(
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 1) 100%
+	);
+	background-image: -o-linear-gradient(
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 1) 100%
+	);
+	background-image: linear-gradient(
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 1) 100%
+	);
+	background-image: -ms-linear-gradient(
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 1) 100%
+	);
+}
+
+#breadcrumbs {
+	margin-top: -1rem;
+	font-size: small;
+	font-style: italic;
+}
+
+#breadcrumbs a {
+	color: #fc9407;
+	transition: 0.2s;
+	text-decoration: none; }
+
+#breadcrumbs a:hover {
+	transition: 0.2s;
+	color: #a51915; }
+
+/*safari fix*/
+@supports ((position:-webkit-sticky) or (position:sticky)) {
+	.sticky-top {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 1020
+	}
+}
 
 @media screen and (min-width: 576px) {
 	.card-columns {
@@ -679,3 +734,4 @@ footer .information li.current-menu-item a {
 		top: 42px;
 	}
 }
+

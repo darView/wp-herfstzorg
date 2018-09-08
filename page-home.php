@@ -15,7 +15,7 @@ $home_reviews_heading       = get_field('home_reviews_heading');
 $home_reviews_lead          = get_field('home_reviews_lead')
 
 ?>
-<div id="home">
+    <div id="home">
     <div class="container">
         <h1 class="js-wp js-wp-title h1 py-5 text-center"><?php single_post_title(); ?></h1>
 
@@ -25,7 +25,7 @@ $home_reviews_lead          = get_field('home_reviews_lead')
             <div class="row">
                 <div class="col">
                     <div class="container py-sm-5 py-4">
-                        <h1 class="js-wp js-wp-home-1"><?php echo $home_parallax_heading; ?></h1>
+                        <h2 class="js-wp js-wp-home-1 h1"><?php echo $home_parallax_heading; ?></h2>
                         <p class="js-wp js-wp-home-1 d-none d-sm-block pb-5"><?php echo $home_parallax_lead; ?></p>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ $home_reviews_lead          = get_field('home_reviews_lead')
         <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $home_reviews_image['url']; ?>" data-ios-fix="true" data-android-fix="true">
             <div class="row">
                 <div class="col py-5">
-                    <h1 class="js-wp js-wp-home-5"><?php echo $home_reviews_heading; ?></h1>
+                    <h2 class="js-wp js-wp-home-5 h1"><?php echo $home_reviews_heading; ?></h2>
                     <p class="js-wp js-wp-home-5 pb-5"><?php echo $home_reviews_lead; ?></p>
                 </div>
             </div>
