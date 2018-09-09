@@ -93,6 +93,15 @@
 <script src="<?php echo bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script>
 <script src="<?php echo bloginfo('template_directory'); ?>/assets/js/scripts.min.js"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124643036-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-124643036-1');
+</script>
+
 <?php if ($wp_query->queried_object->post_name == "contact"): ?>
 <script>
     function initMap()
