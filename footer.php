@@ -102,7 +102,7 @@
     gtag('config', 'UA-124643036-1');
 </script>
 
-<?php if ($wp_query->queried_object->post_name == "contact"): ?>
+<?php if (isset($wp_query->queried_object->post_name) && ($wp_query->queried_object->post_name == "contact")): ?>
 <script>
     function initMap()
     {

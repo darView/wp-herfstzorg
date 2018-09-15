@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/animate.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/rpi.bundle.css">
 
 	<?php wp_head(); ?>
 

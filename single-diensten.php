@@ -14,7 +14,7 @@ get_header();
 ?>
 
 <div id="diensten">
-    <div class="container">
+    <div class="container mb-5">
 
         <?php
         if ( function_exists('yoast_breadcrumb') ) {
@@ -43,7 +43,7 @@ get_header();
         </div>
     </div>
 
-    <div class="container">
+    <div class="container my-5">
         <?php if (!empty($services_body)) : ?>
             <p><?php echo $services_body; ?></p>
         <?php endif; ?>
