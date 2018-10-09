@@ -68,7 +68,7 @@ $home_reviews_lead          = get_field('home_reviews_lead')
 
                     <div class="row">
 
-                        <?php $loop = new WP_Query(['post_type' => 'reviews', 'orderby' => 'post_id', 'order' => 'ASC']); ?>
+                        <?php $loop = new WP_Query(['post_type' => 'reviews', 'orderby' => 'post_id', 'order' => 'DESC']); ?>
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                             <?php get_template_part( 'template-parts/content-testimonial', 'testimonial' ); ?>
                         <?php endwhile; ?>

@@ -12,7 +12,6 @@ get_header();
 
 
 ?>
-
 <div id="diensten">
     <div class="container mb-5">
 

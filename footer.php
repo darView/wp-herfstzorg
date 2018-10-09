@@ -95,24 +95,28 @@
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124643036-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-124643036-1');
+<script async>
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-124643036-1');
+
 </script>
 
 <?php if (isset($wp_query->queried_object->post_name) && ($wp_query->queried_object->post_name == "contact")): ?>
-<script>
-    function initMap()
-    {
-        var location = {lat: <?php echo get_field('google_maps_lat'); ?>, lng: <?php echo get_field('google_maps_lng'); ?>};
-        var map      = new google.maps.Map(
-        document.getElementById('map'), {zoom: 10, center: location});
-        var marker   = new google.maps.Marker({position: location, map: map});
-    }
+<script async>
+
+        function initMap()
+        {
+            var location = {lat: <?php echo get_field('google_maps_lat'); ?>, lng: <?php echo get_field('google_maps_lng'); ?>};
+            var map      = new google.maps.Map(
+            document.getElementById('map'), {zoom: 10, center: location});
+            var marker   = new google.maps.Marker({position: location, map: map});
+        }
+
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_field('google_maps_javascript_api'); ?>&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_field('google_maps_javascript_api'); ?>&callback=initMap"></script>
 <?php endif; ?>
 </body>
 </html>

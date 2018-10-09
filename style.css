@@ -358,6 +358,16 @@ body {
 .fa {
 	font-size: 55px; }
 
+.review-stars {
+	margin-top: 1rem;
+}
+.review-stars .fa {
+	font-size: 1.1rem;
+}
+.review-stars .checked {
+	color: #fc9407;
+}
+
 .dark-overlay {
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.4);
@@ -431,6 +441,7 @@ body {
 #testimonials .testimonial img {
 	width: 75px;
 	height: 75px;
+	margin-bottom: 1rem;
 	border-radius: 50%;
 	transition: 0.5s; }
 
@@ -689,7 +700,7 @@ footer .information li.current-menu-item a {
 }
 
 #breadcrumbs {
-	margin-top: -1rem;
+	/*margin-top: -1rem;*/
 	font-size: small;
 	font-style: italic;
 }
