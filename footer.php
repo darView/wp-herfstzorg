@@ -91,6 +91,7 @@
 <script src="<?php echo bloginfo('template_directory'); ?>/assets/js/popper.min.js"></script>
 <script src="<?php echo bloginfo('template_directory'); ?>/assets/js/bootstrap.min.js"></script>
 <script src="<?php echo bloginfo('template_directory'); ?>/assets/js/jquery.waypoints.min.js"></script>
+<script src="<?php echo bloginfo('template_directory'); ?>/assets/js/slick.min.js"></script>
 <script src="<?php echo bloginfo('template_directory'); ?>/assets/js/scripts.min.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

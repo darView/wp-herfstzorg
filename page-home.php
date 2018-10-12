@@ -65,9 +65,7 @@ $home_reviews_lead          = get_field('home_reviews_lead')
         <section id="testimonials">
             <div class="section-testimonials mt-5">
                 <div class="container">
-
-                    <div class="row">
-
+                    <div class="slick row" data-slick='{"slidesToShow": 3, "slidesToScroll": 1}'>
                         <?php $loop = new WP_Query(['post_type' => 'reviews', 'orderby' => 'post_id', 'order' => 'DESC']); ?>
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                             <?php get_template_part( 'template-parts/content-testimonial', 'testimonial' ); ?>
