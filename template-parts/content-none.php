@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'wp-herfstzorg' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Geen resultaten', 'wp-herfstzorg' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -34,7 +34,7 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wp-herfstzorg' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, maar we konden geen resultaten vinden voor de opgegeven zoekterm. Probeer het opnieuw met een andere zoekterm.', 'wp-herfstzorg' ); ?></p>
 			<?php
 			get_search_form();
 

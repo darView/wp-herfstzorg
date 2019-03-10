@@ -8,48 +8,45 @@
  */
 
 get_header();
-?>
+?>      <h1 class="js-wp js-wp-title h1 py-5 text-center page-title">
+            <?php
+            /* translators: %s: search query. */
+            printf( esc_html__( 'Zoekresultaat voor: "%s"', 'wp-herfstzorg' ), '<span>' . get_search_query() . '</span>' );
+            ?>
+        </h1>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+        <div class="container blog">
+            <div id="primary" class="row ">
+                <main id="content" class="col-sm-8 js-wp js-wp-about-1">
+                    <?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'wp-herfstzorg' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+                        <?php
+                        /* Start the Loop */
+                        while ( have_posts() ) :
+                            the_post();
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+                            /**
+                             * Run the loop for the search to output the results.
+                             * If you want to overload this in a child theme then include a file
+                             * called content-search.php and that will be used instead.
+                             */
+                            get_template_part( 'template-parts/content', 'single' );
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+                        endwhile;
 
-			endwhile;
+                    else :
 
-			the_posts_navigation();
+                        get_template_part( 'template-parts/content', 'none' );
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
+                    endif;
+                    ?>
+                </main> <!-- content -->
+                <aside class="js-wp js-wp-about-2 col-sm-4">
+                    <?php get_sidebar(); ?>
+                </aside>
+            </div> <!-- primary -->
+        </div><!-- container -->
 <?php
 get_sidebar();
 get_footer();
