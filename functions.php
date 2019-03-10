@@ -112,8 +112,8 @@ function wp_herfstzorg_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'wp-herfstzorg' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'wp_herfstzorg_widgets_init' );
@@ -178,3 +178,10 @@ if ( ! file_exists( get_template_directory() . '/class-wp-social-navwalker.php' 
     // file exists... require it.
     require_once get_template_directory() . '/class-wp-social-navwalker.php';
 }
+
+function new_excerpt_more($more)
+{
+    global $post;
+    return ' ... ';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
