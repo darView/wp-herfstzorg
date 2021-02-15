@@ -36,7 +36,7 @@ $loop->rewind_posts();
                                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                                         <?php if (!get_field('vacature_gesloten')): ?>
                                             <?php $tooltip = get_field('vacature_parallax_heading') . ": " . lcfirst(get_field('vacature_functie')) . " te " . get_field('vacature_locatie'); ?>
-                                            <li><a href="<?php echo the_permalink();?>" data-toggle="tooltip" data-placement="top" title="<?php echo $tooltip ?>"><small>&gt;</small> <?php the_field('vacature_functie'); ?></a></li>
+                                            <li><a href="<?php echo the_permalink();?>" data-toggle="tooltip" data-placement="top" title="<?php echo $tooltip ?>"><?php the_field('vacature_functie');  ?> <small>(V<?php echo get_the_ID(); ?>)</small></a></li>
                                         <?php endif; ?>
                                     <?php endwhile; ?>
                                 </ul>

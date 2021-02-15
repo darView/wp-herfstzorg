@@ -1,5 +1,5 @@
 /*!
-Theme Name: wp-herfstzorg-1.04
+Theme Name: wp-herfstzorg-1.05
 Theme URI: http://underscores.me/
 Author: Guido Scholtes
 Author URI: http://darview.com
@@ -839,10 +839,10 @@ footer .information li.current-menu-item a {
 
 /* === COMMENTS === */
 .blog .post-comments-badge {
-    height: 70px;
-    width: 70px;
+    height: 40px;
+    width: 40px;
     position: absolute;
-    top: 25px;
+    top: 40px;
     right: 20px;
     boder: none;
     -webkit-border-radius: 100%;
