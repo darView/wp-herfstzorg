@@ -12,12 +12,14 @@ $home_parallax_lead         = get_field('home_parallax_lead');
 // home reviews section
 $home_reviews_image         = get_field('home_reviews_image');
 $home_reviews_heading       = get_field('home_reviews_heading');
-$home_reviews_lead          = get_field('home_reviews_lead')
+$home_reviews_lead          = get_field('home_reviews_lead');
+
+$home_google_review_code_block = get_field('home_google_review_code_block');
 
 ?>
     <div id="home">
     <div class="container">
-        <h1 class="js-wp js-wp-title h1 py-5 text-center"><?php single_post_title(); ?></h1>
+        <h1 class="h1 py-5 text-center"><?php single_post_title(); ?></h1>
 
         <div class="pb-5"><?php the_content(); ?></div>
 
@@ -61,18 +63,11 @@ $home_reviews_lead          = get_field('home_reviews_lead')
             </div>
         </div>
 
-        <!-- TESTIMONIALS -->
-        <section id="testimonials">
-            <div class="section-testimonials mt-5">
-                <div class="container">
-                    <div class="slick row" data-slick='{"slidesToShow": 3, "slidesToScroll": 1}'>
-                        <?php $loop = new WP_Query(['post_type' => 'reviews', 'orderby' => 'post_id', 'order' => 'DESC']); ?>
-                        <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                            <?php get_template_part( 'template-parts/content-testimonial', 'testimonial' ); ?>
-                        <?php endwhile; ?>
-
-                    </div>
-                    </p>
+        <!-- GOOGLE REVIEWS SECTIN -->
+        <section id="google-reviews">
+            <div class="container">
+                <div class="pb-5">
+                    <?php echo $home_google_review_code_block; ?>
                 </div>
             </div>
         </section>

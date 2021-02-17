@@ -437,25 +437,40 @@ body {
 	color: #a51915;
 	transition: 0.2s; }
 
-/* TESTIMONIALS AREA */
-#testimonials .testimonial img {
-	width: 75px;
-	height: 75px;
-	margin-bottom: 1rem;
-	border-radius: 50%;
-	transition: 0.5s; }
+#google-reviews .pb-5 {
+	margin-top: 2rem;
+}
 
-#testimonials .testimonial img:hover {
-	transition: 0.5s;
-	transform: scale(0.95); }
+#google-reviews .wp-google-text, #google-reviews a.wp-google-url {
+	font-family: 'Istok Web', 'Merriweather', serif !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	font-size: 1rem !important;
+}
 
-#testimonials .testimonial blockquote .fa.fa-quote-right {
-	margin-right: 10px;
-	font-size: 20px; }
+#google-reviews .wp-more-toggle {
+	color: #fc9407 !important;
+}
+#google-reviews .wp-more-toggle:hover {
+	color: #a51915 !important;
+}
 
-#testimonials .testimonial blockquote hr {
-	border-top: 1px solid #a51915;
-	background-color: #a51915; }
+#google-reviews a.wp-google-url {
+	font-size: 1rem !important;
+	margin-top: 2rem !important;
+	color: #fc9407 !important;
+}
+#google-reviews a.wp-google-url:hover {
+	color: #a51915 !important;
+}
+
+#google-reviews .wp-google-name a, #google-reviews .wp-google-name {
+	color: #fc9407 !important;
+}
+#google-reviews .wp-google-name a:hover, #google-reviews .wp-google-name:hover {
+	color: #a51915 !important;
+}
+
 
 /* FOOTER AREA */
 footer {

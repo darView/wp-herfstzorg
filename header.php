@@ -32,9 +32,10 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-herfstzorg' ); ?></a>
 
-    <?php if (is_front_page()) : ?>
-        <?php get_template_part( 'template-parts/content-carousel', 'carousel' ); ?>
-    <?php endif; ?>
+    <?php get_template_part('template-parts/content-heading', 'heading'); ?>
+<!--    --><?php //if (is_front_page()) : ?>
+<!--        --><?php //get_template_part( 'template-parts/content-carousel', 'carousel' ); ?>
+<!--    --><?php //endif; ?>
 
     <?php get_template_part('template-parts/content-navbar', 'navbar'); ?>
 
