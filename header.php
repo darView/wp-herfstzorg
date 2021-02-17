@@ -31,13 +31,17 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-herfstzorg' ); ?></a>
-
+    <div class="sticky-top" style="background: white">
+        <div class="container">
+            <div class="text-center mb-2">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/head-logo.png" alt="HerfstZorg"/>
+            </div>
+        </div>
+        <?php get_template_part('template-parts/content-navbar', 'navbar'); ?>
+    </div>
     <?php get_template_part('template-parts/content-heading', 'heading'); ?>
-<!--    --><?php //if (is_front_page()) : ?>
-<!--        --><?php //get_template_part( 'template-parts/content-carousel', 'carousel' ); ?>
-<!--    --><?php //endif; ?>
 
-    <?php get_template_part('template-parts/content-navbar', 'navbar'); ?>
+
 
 
 	<div id="content" class="site-content">

@@ -389,8 +389,10 @@ body {
 /** NAVIGATION BAR SECTION */
 #mainNavbar {
 	background: #f1ecc1;
+	margin-bottom:0px !important;
 	/* change the link color */
-	/* change the color of active or hovered links */ }
+	/* change the color of active or hovered links */
+}
 #mainNavbar .navbar .nav-link {
 	white-space: nowrap; }
 #mainNavbar .navbar button.navbar-toggler:focus {
