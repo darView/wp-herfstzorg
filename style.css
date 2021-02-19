@@ -99,17 +99,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	-webkit-font-smoothing: antialiased;
 }
 
+/*mark menu item when it contains a dropdown menu*/
 ul.navbar-nav > .menu-item-has-children > a::after {
 	font-family: FontAwesome;
 	font-weight: 900;
+	font-size: .95rem;
 	content: "\f107";
-	padding-left: 3px;
-}
-
-ul.dropdown-menu > .menu-item-has-children > a::after {
-	font-family: FontAwesome;
-	font-weight: 900;
-	content: "\f105";
 	padding-left: 3px;
 }
 
