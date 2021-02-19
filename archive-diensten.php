@@ -19,7 +19,7 @@ get_header();
         }
         ?>
 
-        <h1 class="js-wp js-wp-title h1 py-5 text-center">Diensten</h1>
+        <h1 class="js-wp js-wp-title h1 py-5 text-center">Dienstens</h1>
 
         <section id="cards-section">
             <div class="container py-5" id="card-columns">

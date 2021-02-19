@@ -8,6 +8,9 @@
  *
  * @package wp-herfstzorg
  */
+$cta_phrase = get_field('cta_phrase');
+$cta_action = get_field('cta_action');
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -31,17 +34,30 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-herfstzorg' ); ?></a>
-    <div class="sticky-top" style="background: white">
+    <div class="sticky-top">
         <div class="container">
-            <div class="text-center mb-2">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/head-logo.png" alt="HerfstZorg"/>
+            <div class="row">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <img class="mt-2" src="<?php bloginfo('template_directory'); ?>/assets/img/head-logo.png" alt="HerfstZorg"/>
+                </div>
+                <?php if (strlen($cta_phrase)) { ?>
+                    <div class="col-md-4 text-center">
+                        <a href="<?php echo $cta_action;?>" class="btn btn-primary btn-md"><?php echo $cta_phrase; ?></a>
+                    </div>
+                <?php } ?>
             </div>
         </div>
         <?php get_template_part('template-parts/content-navbar', 'navbar'); ?>
     </div>
     <?php get_template_part('template-parts/content-heading', 'heading'); ?>
-
-
-
-
+    <div class="container">
+        <?php
+        if ( function_exists('yoast_breadcrumb') ) {
+            yoast_breadcrumb(
+                '<p id="breadcrumbs">',
+                '</p>'
+            );
+        }
+        ?>
+    </div>
 	<div id="content" class="site-content">

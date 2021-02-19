@@ -1,16 +1,19 @@
-<div class="card">
-    <div class="card-body">
-        <h4 class="card-title"><?php echo the_title(); ?></h4>
-        <p class="card-text"><?php echo the_field('services_intro'); ?></p>
-        <?php if (!empty(get_field('services_body'))) : ?>
-            <div class="fadeout"></div>
-            <div class="read-more text-left"><a href="<?php echo the_permalink();?>" data-toggle="tooltip" data-placement="top" title="Klik om verder te lezen"><i class="fa fa-arrow-right"></i>Lees verder</a></div>
-        <?php endif; ?>
+<?php
+    $services_image = get_field('services_image');
+//    print_r($serices_image); die();
+?>
+<div class="col-sm-4">
+    <div class="card">
+        <a href="<?php echo the_permalink();?>" data-toggle="tooltip" data-placement="top" title="Klik om verder te lezen">
+                <img
+                class="card-img-top img-fluid"
+                src="<?php echo $services_image['sizes']['medium']; ?>"
+                alt="<?php echo $services_image['alt'] ?>"
+            />
+
+            <div class="card-img-overlay">
+                <h3 class="card-title"><?php echo the_title(); ?></h3>
+            </div>
+        </a>
     </div>
-    <?php $serices_image = get_field('services_image'); ?>
-    <img
-        class="card-img-top img-fluid"
-        src="<?php echo $serices_image['url']; ?>"
-        alt="<?php echo $serices_image['alt'] ?>"
-    />
 </div>

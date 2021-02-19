@@ -22,11 +22,11 @@ $loop->rewind_posts();
         <div class="container">
 
 
-            <h1 class="js-wp js-wp-title h1 my-5 text-center"><?php single_post_title(); ?></h1>
+            <h1 class=" h1 my-5 text-center"><?php single_post_title(); ?></h1>
 
             <div class="row mb-5">
 
-                <div class="js-wp js-wp-about-1 col col-lg-3 col-md-4 col-sm-6 text-center mb-5">
+                <div class="col col-lg-3 col-md-4 col-sm-6 text-center mb-5">
                     <img class="image" src="<?php echo $about_image['url']; ?>" alt="<?php echo $about_image['alt']; ?>"/>
                     <?php if (single_post_title("", false) == 'Vacatures'): ?>
                         <?php if ($vacatures_found): ?>
@@ -45,7 +45,7 @@ $loop->rewind_posts();
                     <?php endif; ?>
                 </div>
 
-                <div class="js-wp js-wp-about-2 col col-lg-9 col-md-8 col-sm-6">
+                <div class="col col-lg-9 col-md-8 col-sm-6">
                     <?php echo ($about_story); ?>
                 </div>
 
