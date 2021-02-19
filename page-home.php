@@ -20,9 +20,7 @@ $home_google_review_code_block = get_field('home_google_review_code_block');
     <div id="home">
     <div class="container">
 
-        <h1 class="h1 py-5 text-center"><?php single_post_title(); ?></h1>
-
-        <div class="pb-5"><?php the_content(); ?></div>
+        <div class="pb-5 the-content"><?php the_content(); ?></div>
 
         <?php get_template_part( 'template-parts/content-home-icons', 'home-icons' ); ?>
 

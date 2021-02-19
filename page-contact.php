@@ -17,7 +17,7 @@ get_header();
 
         <div class="container">
 
-            <h1 class="js-wp js-wp-title h1 my-5 text-center">Contact</h1>
+            <div class="pb-5 the-content"><?php the_content(); ?></div>
 
             <div class="row mb-5">
 

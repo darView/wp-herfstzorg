@@ -58,6 +58,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
+.the-content {
+	margin-top: 1.5em;
+}
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {

@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: About Page
+    Template Name: Diensten Page
 */
 $about_image        = get_field('about_image');
 $about_story        = substr(get_field('about_story'), 3); // strip leading <p>
@@ -8,17 +8,13 @@ $about_story        = substr($about_story, 0, -5); // strip trailing </p>
 
 get_header();
 ?>
-<section id="about">
+<section id="diensten">
 
     <div class="container">
 
-        <h1 class="my-5 text-center"><?php single_post_title(); ?></h1>
-
         <div class="row mb-5">
 
-            <div class="js-wp js-wp-about-1 col col-lg-3 col-md-4 col-sm-6 text-center mb-5">
-                <img class="image" src="<?php echo $about_image['url']; ?>" alt="<?php echo $about_image['alt']; ?>"/>
-            </div>
+            <div class="pb-5 the-content"><?php the_content(); ?></div>
 
             <!-- CARD COLUMNS -->
             <section id="cards-section">

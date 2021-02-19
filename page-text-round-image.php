@@ -21,9 +21,6 @@ $loop->rewind_posts();
 
         <div class="container">
 
-
-            <h1 class=" h1 my-5 text-center"><?php single_post_title(); ?></h1>
-
             <div class="row mb-5">
 
                 <div class="col col-lg-3 col-md-4 col-sm-6 text-center mb-5">

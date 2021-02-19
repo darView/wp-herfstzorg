@@ -14,8 +14,6 @@ get_header();
 ?>
 <div id="diensten">
     <div class="container mb-5">
-
-        <h1 class="js-wp js-wp-title h1 my-5 text-center"><?php echo the_title(); ?></h1>
         <p><?php echo $services_intro; ?></p>
     </div>
 

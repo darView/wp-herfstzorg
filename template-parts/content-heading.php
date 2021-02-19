@@ -14,7 +14,7 @@ $heading_lead           = get_field('heading_lead');
                 >
                 <div class="container">
                     <div class="carousel-caption d-none d-sm-block mb-auto">
-                        <h2 class="display-3"><?php echo $heading_caption; ?></h2>
+                        <h1 class="display-3"><?php single_post_title(); ?></h1>
                         <p class="lead d-none d-md-inline"><?php echo $heading_lead; ?></p>
                     </div>
                 </div>

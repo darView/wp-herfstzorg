@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Dienst Page
+    Template Name: Single actuele vacatures Page
 */
 $vacature_intro             = get_field('vacature_intro');
 $vacature_body              = get_field('vacature_body');
