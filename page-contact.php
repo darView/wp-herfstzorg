@@ -21,7 +21,7 @@ get_header();
 
             <div class="row mb-5">
 
-                <div class="js-wp js-wp-contact-2 col-sm-6 address">
+                <div class="col-sm-6 address">
                     <table class="table">
                         <tr>
                             <td><i class="fa fa-envelope-open" data-toggle="tooltip" data-placement="top" title="Postadres"></i></td>
@@ -43,7 +43,7 @@ get_header();
                     </table>
                 </div>
 
-                <div class="js-wp js-wp-contact-3 col-sm-6 directions">
+                <div class="col-sm-6 directions">
 
                     <!-- ACCORDION -->
                     <div id="accordion">
