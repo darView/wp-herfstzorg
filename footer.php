@@ -14,40 +14,36 @@
 <?php wp_footer(); ?>
 
 
+
+
 <footer class="footer">
     <div class="container pt-4">
         <div class="row">
 
             <!-- first column -->
             <div class="col col-12 col-sm-6 pl-1">
-                <div class="row follow-us">
+                <div class="row">
                     <div class="col">
-                        <p class="text-uppercase">Volg ons</p>
-                        <hr/>
-                        <?php
-                        wp_nav_menu([
-                            'theme_location'    => 'social',
-                            'container_class'   => 'clearfix',
-                            'menu_class'        => 'social-links float-left',
-                            'walker'            =>  new WP_Social_Navwalker()
-                        ]);
-                        ?>
-                        <!--<div class="clearfix">-->
-                        <!--    <ul class="social-links float-left">-->
-                        <!--        <li>-->
-                        <!--            <a href="https://www.facebook.com/HerfstZorg/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Volg ons op Facebook"></i></a>-->
-                        <!--        </li>-->
-                        <!--        <li>-->
-                        <!--            <a href="https://twitter.com/herfstzorg" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Volg ons op Twitter"></i></a>-->
-                        <!--        </li>-->
-                        <!--        <li>-->
-                        <!--            <a href="https://www.linkedin.com/company/herfstzorg/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Volg ons op LinkedIn"></i></a>-->
-                        <!--        </li>-->
-                        <!--        <li>-->
-                        <!--            <a href="https://www.instagram.com/herfstzorg/" TARGET="_blank"><i class="fa fa-instagram" aria-hidden="true"  data-toggle="tooltip" data-placement="top" title="Volg ons op Instagram"></i></a>-->
-                        <!--        </li>-->
-                        <!--    </ul>-->
-                        <!--</div>-->
+                        <div class="follow-us">
+                            <p class="text-uppercase">Volg ons</p>
+                            <hr/>
+                            <?php
+                            wp_nav_menu([
+                                'theme_location'    => 'social',
+                                'container_class'   => 'clearfix',
+                                'menu_class'        => 'social-links float-left',
+                                'walker'            =>  new WP_Social_Navwalker()
+                            ]);
+                            ?>
+                        </div>
+                    </div>
+
+                    <div id="sbb-accredited" class="col">
+                        <p class="text-uppercase">Erkend leerbedrijf</p>
+                        <hr />
+                        <a href="https://www.s-bb.nl/" target="_blank" rdata-toggle="tooltip" data-placement="top" data-original-title="Bezoek de website van SBB">
+                            <img width="165" src="<?php bloginfo('template_directory'); ?>/assets/img/sbb-beeldmerk-fc.gif" alt="SBB Beeldmerk"></img>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -64,7 +60,8 @@
                             <?php
                                 wp_nav_menu([
                                     'theme_location' => 'primary',
-                                    'container_class' => 'col col-sm-12 col-md-6'
+                                    'container_class' => 'col col-sm-12 col-md-6',
+                                    'depth' => 1
                                 ]);
                             ?>
 
@@ -74,7 +71,6 @@
                                     'container_class' => 'col col-sm-12 col-md-6'
                                 ]);
                             ?>
-
                         </div>
                     </div>
                 </div>
