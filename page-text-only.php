@@ -4,7 +4,7 @@
 */
 get_header();
 ?>
-    <section id="text-round-image">
+    <section id="text-only">
         <div class="container">
             <div class="pb-5 the-content"><?php the_content(); ?></div>
         </div>

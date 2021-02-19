@@ -454,6 +454,11 @@ body {
 .fa {
 	font-size: 55px; }
 
+.fa.fa-quote-right {
+	font-size: 1.8rem;
+	margin-right: .3rem;
+}
+
 .review-stars {
 	margin-top: 1rem;
 }
@@ -767,41 +772,17 @@ footer .information li.current-menu-parent a {
 	transition: 0.2s;
 	color: #a51915; }
 
-#text-round-image .image {
-	width: 14rem;
-	border-radius: 50%;
-	transition: 0.5s; }
-
-#text-round-image a {
+.the-content a {
 	color: #fc9407;
 	transition: 0.2s;
 	text-decoration: none; }
 
-#text-round-image a:hover {
+.the-content a:hover {
 	transition: 0.2s;
 	color: #a51915; }
 
-#text-round-image img:hover {
-	transition: 0.5s;
-	transform: scale(0.95); }
 
-#text-round-image footer {
-	background-color: white; }
-
-#text-round-image i {
-	font-size: 1.8rem;
-	margin-right: 0.3rem; }
-
-#text-round-image a {
-	color: #fc9407;
-	transition: 0.2s;
-	text-decoration: none; }
-
-#text-round-image a:hover {
-	transition: 0.2s;
-	color: #a51915; }
-
-#text-round-image .current-vacancies {
+.current-vacancies {
 	background: #f1ecc1;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -809,12 +790,12 @@ footer .information li.current-menu-parent a {
 	margin-top: 4rem;
 	padding: 1rem; }
 
-#text-round-image .current-vacancies .head {
+.current-vacancies .head {
 	font-size: inherit;
 	color: #a51915;
 	margin-bottom: 1rem; }
 
-#text-round-image .current-vacancies ul {
+.current-vacancies ul {
 	margin-bottom: 0; }
 
 #home-icons {
