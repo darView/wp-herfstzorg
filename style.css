@@ -1178,9 +1178,14 @@ input:focus {
 	padding-top: 4rem;
 }
 
+
 #sbb-accredited img {
 	margin-left: -18px;
 	padding-left: 0;
 	margin-top: -18px;
 	padding-top: 0;
 }
+
+#sbb-accredited img:hover {
+	transition: 0.5s;
+	transform: scale(0.95); }
