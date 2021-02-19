@@ -185,3 +185,21 @@ function new_excerpt_more($more)
     return ' ... ';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+// ensure the correct yoast breadcrumbs are displayed for e.g. diensten page.
+add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' );
+function unbox_yoast_seo_breadcrumb_append_link( $links ) {
+    global $post;
+    if( is_singular('diensten')){
+        $breadcrumb = array(
+            'url' => site_url( '/diensten/' ),
+            'text' => 'Diensten',
+        );
+        array_splice($links, 1, 0, $breadcrumb);
+        $dienst = array_pop($links);
+        array_push($links, $breadcrumb, $dienst);
+
+    }
+    return $links;
+}
