@@ -17,12 +17,12 @@ get_header();
         <p><?php echo $services_intro; ?></p>
     </div>
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $services_image['url']; ?>" data-ios-fix="true" data-android-fix="true">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url(null,'large') ?>" data-ios-fix="true" data-android-fix="true">
         <div class="row">
             <div class="col">
                 <div class="container py-sm-5 py-4">
                     <?php if (!empty($services_parallax_heading)) : ?>
-                        <h1 class="js-wp js-wp-home-1"><?php echo $services_parallax_heading; ?></h1>
+                        <h2 class="h1 js-wp js-wp-home-1"><?php echo $services_parallax_heading; ?></h2>
                     <?php endif; ?>
                     <?php if (!empty($services_parallax_lead)) : ?>
                         <p class="js-wp js-wp-home-1 d-none d-sm-block pb-5"><?php echo $services_parallax_lead; ?></p>
