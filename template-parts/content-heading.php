@@ -1,6 +1,6 @@
 <?php
 // get the post id for the blog page.
-define('HOME_PAGE', 'nieuws');
+define('HOME_PAGE', 'actueel');
 
 $post_id = null;
 if (is_home() || (is_single() && 'post' === get_post_type())) {

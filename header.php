@@ -50,7 +50,7 @@ $cta_action = get_field('cta_action');
         </div>
         <?php get_template_part('template-parts/content-navbar', 'navbar'); ?>
     </div>
-    <?php get_template_part('template-parts/content-heading', 'heading'); ?>
+    <?php get_template_part((isset($args['404']) && $args['404']) ? 'template-parts/content-heading-404' : 'template-parts/content-heading', 'heading'); ?>
     <div class="container">
         <?php
         if ( function_exists('yoast_breadcrumb') ) {
