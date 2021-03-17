@@ -23,7 +23,8 @@ $cta_action = get_field('cta_action');
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/animate.css">
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/slick.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 	<?php wp_head(); ?>
 
     <!-- HTML5 shiv goes here! -->
@@ -38,7 +39,7 @@ $cta_action = get_field('cta_action');
         <div class="container">
             <div class="row">
                 <div class="col-md-4 offset-md-4 text-center">
-                    <img class="mt-2" src="<?php bloginfo('template_directory'); ?>/assets/img/head-logo.png" alt="HerfstZorg"/>
+                    <img class="company-logo mt-2" src="<?php bloginfo('template_directory'); ?>/assets/img/head-logo.png" alt="HerfstZorg"/>
                 </div>
                 <?php if (strlen($cta_phrase)) { ?>
                     <div class="col-md-4 text-center">

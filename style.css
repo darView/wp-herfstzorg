@@ -62,11 +62,33 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-top: 1.5em;
 }
 
+.jumbotron {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	background-size: 100% auto;
+	color: white;
+}
+
+.jumbotron .container {
+	background: rgba(0, 0, 0, 0.35); }
+
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
+}
+
+#testimonials .testimonial img {
+	width: 75px;
+	height: 75px;
+	margin-bottom: 1rem;
+	border-radius: 50%;
+	transition: .5s;
 }
 
 .comment-navigation .nav-previous,
@@ -513,53 +535,101 @@ body {
 
 /* HOME SECTION */
 /* CARDS SECTION */
-#cards-section {
+#cards-section, #vacancies-section {
 	font-size: 1.4rem;
 }
-#cards-section .card-img-overlay {
+#cards-section .card-img-overlay, #vacatures .card-img-overlay {
 	width: 80%;
 	height: 36%;
 	margin: auto;
 	background: rgba(0, 0, 0, 0.35); }
+#vacatures .card-img-overlay {
+	height: 72%;
+}
 
 #cards-section h3 {
 	color: white;
 	text-align: center;
 	position: relative;
+	margin: auto;
 	top: 32%;
 	transform: translateY(-32%);
 }
+
+#vacatures .card h3, #vacatures .card p {
+	text-align: center;
+	margin: auto;
+	color: white;
+}
+
+#showcase h1 {
+	font-size: 1.3rem;
+}
+
+/* show company logo small on galaxy fold */
+.company-logo {
+	width: 250px;
+}
+@media screen and (min-width: 380px) { /* 350 px logo width + 2 x 15 px padding */
+	.company-logo {
+		width: 350px;
+	}
+}
+
 @media screen and (min-width: 576px) {
+	.hero {
+		max-height: 120px;
+	}
+	#showcase h1 {
+		font-size: 2rem;
+	}
 	.card h3 {
-		font-size: 0.7rem !important;
+		font-size: 1.3rem !important;
+		margin: auto !important;
 	} }
 @media screen and (min-width: 768px) {
+	#showcase h1 {
+		font-size: 2.7rem;
+	}
 	.card h3 {
-		font-size: 1.1rem !important;
-	} }
+		font-size: 1.0rem !important;
+		margin: auto !important;
+	}
+}
 @media screen and (min-width: 992px) {
+	#showcase h1 {
+		font-size: 3.4rem;
+	}
 	.card h3 {
-		font-size: 1.4rem !important;
-	} }
+		font-size: 1.8rem !important;
+		margin: auto !important;;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#showcase h1 {
+		font-size: 4.1rem;
+	}
+}
+@media screen and (min-width: 1400px) {
+	#showcase h1 {
+		font-size: 5rem;
+	}
+}
 
 
-#cards-section img:hover {
-	transition: 0.5s;
-	transform: scale(0.95); }
-#cards-section img {
-	transition: 0.5s; }
-#cards-section .card-body p {
+#cards-section .card-body p, #vacancies-section .card-body p {
 	max-height: 11.5rem;
 	overflow: hidden; }
-#cards-section .card-body a {
+#cards-section .card-body a, #vacancies-section .card-body a {
 	font-size: small;
 	color: #fc9407;
 	transition: 0.2s;
 	text-decoration: none; }
-#cards-section .card-body i {
+#cards-section .card-body i, #vacancies-section .card-body i {
 	font-size: 0.8rem;
 	margin-right: 0.2rem; }
-#cards-section .card-body a:hover {
+#cards-section .card-body a:hover, #vacancies-section .card-body a:hover {
 	color: #a51915;
 	transition: 0.2s; }
 
@@ -741,7 +811,10 @@ footer .information li.current-menu-parent a {
 #about footer {
 	background-color: white; }
 
-#about img:hover {
+.img-tension {
+	transition: 0.5s;  }
+
+.img-tension:hover {
 	transition: 0.5s;
 	transform: scale(0.95); }
 
@@ -758,12 +831,12 @@ footer .information li.current-menu-parent a {
 	transition: 0.2s;
 	color: #a51915; }
 
-#home a {
+#home a, #testimonials a, #vacatures a {
 	color: #fc9407;
 	transition: 0.2s;
 	text-decoration: none; }
 
-#home a:hover {
+#home a:hover. testimonials a:hover {
 	transition: 0.2s;
 	color: #a51915; }
 
@@ -802,8 +875,8 @@ footer .information li.current-menu-parent a {
 	text-align: center;
 	color: #fff; }
 
-/* overlay parallax windon on diensten page */
-#diensten .parallax-window {
+/* darken parallax window  */
+.parallax-window {
 	 background-color: rgba(0, 0, 0, .3); }
 
 .fadeout {
@@ -902,7 +975,7 @@ footer .information li.current-menu-parent a {
 }
 
 .blog .single {
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 }
 
 .blog .post header h1,
@@ -928,21 +1001,11 @@ footer .information li.current-menu-parent a {
     color: #a51915;
 }
 
-.blog .post-image img {
-    width: 100%;
-    height: auto;
-    transition: 0.5s;
-}
-
-.blog .post-image img:hover {
-    transition: 0.5s;
-    transform: scale(0.95);
-}
-
 .blog .post .post-details {
     font-size: 0.8rem;
     width: 90%;
 }
+
 
 .blog .post .post-details i.fa {
     padding-left: 0.5rem;
@@ -962,7 +1025,7 @@ footer .information li.current-menu-parent a {
     position: absolute;
     top: 40px;
     right: 20px;
-    boder: none;
+    border: none;
     -webkit-border-radius: 100%;
     -moz-border-radius: 1000%;
     border-radius: 100%;
@@ -1127,7 +1190,7 @@ input[type="password"],
 input[type="search"],
 textarea {
     color: #666;
-    boder: solid 1px #ccc;
+    border: solid 1px #ccc;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -1155,7 +1218,7 @@ input:focus {
 }
 
 .container.single.blog {
-	padding-top: 4rem;
+	/*padding-top: 4rem;*/
 }
 
 
@@ -1166,6 +1229,107 @@ input:focus {
 	padding-top: 0;
 }
 
-#sbb-accredited img:hover {
-	transition: 0.5s;
-	transform: scale(0.95); }
+.glyphicon { margin-right:5px;}
+.rating .glyphicon {font-size: 22px;}
+.rating-num { margin-top:0px;font-size: 54px; }
+.progress { margin-bottom: 5px;}
+.progress-bar { text-align: left; }
+.rating-desc .col-md-3 {padding-right: 0px;}
+.sr-only { margin-left: 5px;overflow: visible;clip: auto; margin-top: -16px;}
+
+
+/* ACTUEEL SECTION */
+
+.actueel .card {
+	overflow: hidden;
+}
+.actueel .card-text {
+	margin-bottom: 3rem;
+}
+.actueel .card-img {
+	position: relative;
+}
+.actueel .top-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.actueel .centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.actueel .card-meta {
+	background-color: #f1ecc1;
+}
+.actueel .card-meta i {
+	font-size: 1rem;
+	padding: 4px 4px 0 4px;
+	color: #a51915;
+}
+.actueel .card-meta time {
+	padding-right: 4px;
+	font-size: 0.8rem;
+}
+.actueel .card-body {
+	padding: -2rem 2rem 0 2rem;
+}
+.actueel a, .actueel a:hover {
+	color: black;
+	transition: 0.2s;
+}
+.actueel .read-more {
+	position:absolute;
+	bottom:1rem;
+	right:1rem;
+	color: #fc9407;
+}
+.actueel a:hover .read-more {
+	color: #a51915;
+	transition: 0.2s;
+}
+.actueel .card-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	color: darkgray;
+}
+.actueel .card-header {
+	color: white;
+	white-space: nowrap;
+	font-size: 1.8rem;
+	background-color: rgba(0, 0, 0, .3);;
+	border: none;
+}
+
+@media screen and (min-width: 576px) {
+	.actueel .card {
+		min-height: 34rem;
+		max-height: 34rem;
+	}
+	.actueel .card-header {
+		font-size: 1.0rem;
+	}
+	.actueel .card-text {
+		margin-bottom: 0;
+	}
+}
+@media screen and (min-width: 768px) {
+	.actueel .card {
+		min-height: 37rem;
+		max-height: 37rem;
+	}
+	.actueel .card-header {
+		font-size: 1rem;
+	}
+}
+@media screen and (min-width: 992px) {
+	.actueel .card {
+		min-height: 32rem;
+		max-height: 32rem;
+	}
+	.actueel .card-header {
+		font-size: 1.4rem;
+	}
+}

@@ -42,7 +42,7 @@
                         <p class="text-uppercase">Erkend leerbedrijf</p>
                         <hr />
                         <a href="https://www.s-bb.nl/" target="_blank" rdata-toggle="tooltip" data-placement="top" data-original-title="Bezoek de website van SBB">
-                            <img width="165" src="<?php bloginfo('template_directory'); ?>/assets/img/sbb-beeldmerk-fc.gif" alt="SBB Beeldmerk"></img>
+                            <img width="165" class="img-tension" src="<?php bloginfo('template_directory'); ?>/assets/img/sbb-beeldmerk-fc.gif" alt="SBB Beeldmerk"></img>
                         </a>
                     </div>
                 </div>

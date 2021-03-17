@@ -14,7 +14,7 @@ get_header();
 
         <div class="row mb-5">
 
-            <div class="pb-5 the-content"><?php the_content(); ?></div>
+            <div class="the-content"><?php the_content(); ?></div>
 
             <!-- CARD COLUMNS -->
             <section id="cards-section">

@@ -1,11 +1,11 @@
 <?php
 $home_testimonial_image = get_field('home_testimonial_image');
 ?>
-<div class="col-sm-12 col-md-4">
+<div class="col-sm-12 col-md-6 col-lg-4">
     <div class="row testimonial">
         <div class="col-sm-4 text-center">
             <img
-                src="<?php echo $home_testimonial_image['url']; ?>"
+                src="<?php echo $home_testimonial_image['sizes']['thumbnail']; ?>"
                 alt="<?php echo $home_testimonial_image['alt']; ?>"
             >
         </div>

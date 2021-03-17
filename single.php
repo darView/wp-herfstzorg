@@ -12,7 +12,7 @@ get_header();
 <div id="blog">
     <div class="container single blog">
         <div class="row" id="primary">
-            <main id="content" class="js-wp js-wp-about-1 col-sm-8">
+            <main id="content" class="col-sm-8">
 
             <?php while ( have_posts() ) : the_post(); ?>
 
@@ -25,7 +25,7 @@ get_header();
             <?php endwhile; ?>
             </main> <!-- content -->
 
-            <aside class="js-wp js-wp-about-2 col-sm-4">
+            <aside class="col-sm-4">
                 <?php get_sidebar(); ?>
             </aside>
 

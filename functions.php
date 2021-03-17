@@ -191,15 +191,40 @@ add_filter('excerpt_more', 'new_excerpt_more');
 add_filter( 'wpseo_breadcrumb_links', 'unbox_yoast_seo_breadcrumb_append_link' );
 function unbox_yoast_seo_breadcrumb_append_link( $links ) {
     global $post;
-    if( is_singular('diensten')){
-        $breadcrumb = array(
-            'url' => site_url( '/diensten/' ),
-            'text' => 'Diensten',
-        );
+    if( is_singular('diensten') || is_singular('vacatures') || is_singular('actueel')){
+            if (is_singular('diensten')) {
+                $breadcrumb = [
+                    'url' => site_url('/diensten/'),
+                    'text' => 'Diensten',
+                ];
+            } elseif (is_singular('vacatures')) {
+                $breadcrumb = [
+                    'url' => site_url('/vacatures/'),
+                    'text' => 'Vacatures',
+                ];
+            } elseif (is_singular('actueel')) {
+                $breadcrumb = [
+                    'url' => site_url('/actueel/'),
+                    'text' => 'Actueel',
+                ];
+            }
         array_splice($links, 1, 0, $breadcrumb);
-        $dienst = array_pop($links);
-        array_push($links, $breadcrumb, $dienst);
+        $active = array_pop($links);
+        array_push($links, $breadcrumb, $active);
 
     }
     return $links;
+}
+
+
+/**
+ * @param string $custom_field_name
+ * @return bool|int
+ */
+function getPageIdFromSlug($custom_field_name) {
+    $slug = get_field($custom_field_name);
+    if ($diensten_post = get_page_by_path($slug, OBJECT)) {
+        return $diensten_post->ID;
+    }
+    return false;
 }
