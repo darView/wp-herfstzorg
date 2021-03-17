@@ -32,8 +32,8 @@ $loop = new WP_Query([
             <div class="row">
                 <div class="col">
                     <div class="container py-sm-5 py-4">
-                        <h2 class="h1 js-wp js-wp-home-1"><?php echo get_the_title($parent_page->ID); ?></h2>
-                        <p class="js-wp js-wp-home-1 d-none d-sm-block pb-5">Gerelateerde artikelen.</p>
+                        <h2 class="h1 js-wp js-wp-home-1">Gerelateerde artikelen</h2>
+                        <p class="js-wp js-wp-home-1 d-none d-sm-block pb-5"><?php echo get_field('categorie'); ?></p>
                     </div>
                 </div>
             </div>
