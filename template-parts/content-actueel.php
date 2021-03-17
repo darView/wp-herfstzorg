@@ -13,10 +13,6 @@ if (!strlen(trim($titel))) {
     $titel = get_the_title();
 }
 ?>
-<style>
-
-</style>
-
 <div id="post-<?php the_ID(); ?>" <?php post_class('actueel'); ?>>
     <a href="<?php esc_url(the_permalink()); ?>">
         <div class="card mt-4">

@@ -1277,6 +1277,7 @@ input:focus {
 }
 .actueel a, .actueel a:hover {
 	color: black;
+	text-decoration: none;
 	transition: 0.2s;
 }
 .actueel .read-more {

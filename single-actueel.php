@@ -22,7 +22,7 @@ $loop = new WP_Query([
 ]);
 
 ?>
-    <div id="actueel">
+    <div id="actueel-<?php the_ID(); ?>">
         <div class="container mb-5">
             <p><?php  the_content(); ?></p>
         </div>
@@ -40,7 +40,7 @@ $loop = new WP_Query([
         </div>
 
         <!-- CARD COLUMNS -->
-        <section id="actueel">
+        <section id="actueel-cards">
             <div class="container py-5">
                 <div class="row">
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
