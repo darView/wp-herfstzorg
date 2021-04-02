@@ -16,7 +16,7 @@ if ($vacature_gesloten) {
     $vacature_lokaal = false;
 }
 $loop = new WP_Query([
-
+    'nopaging' => true,
     'post_type' => 'vacatures',
     'orderby' => 'post_id',
     'order' => 'ASC',

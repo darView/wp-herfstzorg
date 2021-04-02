@@ -34,7 +34,7 @@ $google_reviews_image = get_field('google_reviews_image', $id_reviews_page);
             <section id="cards-section">
                 <div class="container py-5">
                     <div class="row">
-                        <?php $loop = new WP_Query(['post_type' => 'diensten', 'orderby' => 'post_id', 'order' => 'ASC']); ?>
+                        <?php $loop = new WP_Query(['nopaging' => true, 'post_type' => 'diensten', 'orderby' => 'post_id', 'order' => 'ASC']); ?>
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                             <?php get_template_part( 'template-parts/content-card', 'card' ); ?>
                         <?php endwhile; ?>

@@ -10,6 +10,7 @@ $page_path = "/" . $post->post_type . "/";
 $parent_page = get_page_by_path($page_path, OBJECT, 'page');
 
 $loop = new WP_Query([
+    'nopaging' => true,
     'post_type' => 'actueel',
     'orderby' => 'post_id',
     'order' => 'DESC',
@@ -23,10 +24,17 @@ $loop = new WP_Query([
 
 ?>
     <div id="actueel-<?php the_ID(); ?>">
-        <div class="container mb-5">
-            <p><?php  the_content(); ?></p>
+        <div class="container mb-2">
+            <div class="blog-header">
+                <span>
+                    <i class="fa fa-clock-o"></i><time><?php the_date(); ?></time>
+                    <span class="categorie"><?php the_field('categorie'); ?></span>
+                </span>
+            </div>
+            <div class="actueel-content">
+                <p><?php  the_content(); ?></p>
+            </div>
         </div>
-
         <?php if (count($loop->posts) > 1): ?>
         <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url($parent_page->ID, 'full'); ?>" data-ios-fix="true" data-android-fix="true">
             <div class="row">

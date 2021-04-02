@@ -5,6 +5,7 @@
 get_header();
 
 $loop = new WP_Query([
+    'nopaging' => true,
     'post_type' => 'actueel',
     'orderby' => 'post_id',
     'order' => 'DESC',

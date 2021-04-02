@@ -32,7 +32,7 @@ $parent_page = get_page_by_path($page_path, OBJECT, 'page');
     <section id="cards-section">
         <div class="container py-5">
             <div class="row">
-                <?php $loop = new WP_Query(['post_type' => 'diensten', 'orderby' => 'post_id', 'order' => 'ASC']); ?>
+                <?php $loop = new WP_Query(['nopaging' => true, 'post_type' => 'diensten', 'orderby' => 'post_id', 'order' => 'ASC']); ?>
                 <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                     <?php if ((int) get_the_ID() !== $currentId): ?>
                         <?php get_template_part( 'template-parts/content-card', 'card' ); ?>

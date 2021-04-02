@@ -62,6 +62,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	margin-top: 1.5em;
 }
 
+h2 {
+	font-size: 80%;
+	color: #888;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+.blockquote-footer {
+	color: #888;
+}
+
 .jumbotron {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1109,7 +1120,7 @@ footer .information li.current-menu-parent a {
 
 #comments .comment-notes {
 	font-size: 0.8rem;
-	color: gray;
+	color: #888;
 	text-align: center	;
 }
 
@@ -1294,7 +1305,7 @@ input:focus {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 0.8rem;
-	color: darkgray;
+	color: gray;
 }
 .actueel .card-header {
 	color: white;
@@ -1302,6 +1313,45 @@ input:focus {
 	font-size: 1.8rem;
 	background-color: rgba(0, 0, 0, .3);;
 	border: none;
+}
+
+.actueel-content a {
+	color: #fc9407;
+	transition: 0.2s;
+}
+
+.actueel-content a:hover {
+	transition: 0.2s;
+	color: #a51915;
+}
+
+.blog-header {
+	text-align: right;
+	font-size: 0.8rem;
+	/*margin-bottom: -1rem;*/
+	/*margin-top: -2rem;*/
+}
+.blog-header span {
+	background-color: #f1ecc1;
+	padding-top: 2px;
+}
+.blog-header i {
+	position: relative;;
+	top: 1px;
+	font-size: 1rem;
+	padding-left: 4px;
+	padding-right: 4px;
+	color: #a51915;
+}
+.blog-header time {
+}
+.blog-header .categorie {
+	/*background-color: #ccc;*/
+	background-color: #a51915;
+	padding-left: 4px;
+	padding-right: 4px;
+	color: white;
+	text-transform: uppercase;
 }
 
 @media screen and (min-width: 576px) {
@@ -1334,3 +1384,4 @@ input:focus {
 		font-size: 1.4rem;
 	}
 }
+

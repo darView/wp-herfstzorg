@@ -23,7 +23,7 @@ get_header();
             <div class="section-testimonials mt-5">
                 <div class="container">
                     <div class="row">
-                        <?php $loop = new WP_Query(['post_type' => 'reviews', 'orderby' => 'post_id', 'order' => 'DESC']); ?>
+                        <?php $loop = new WP_Query(['nopaging' => true, 'post_type' => 'reviews', 'orderby' => 'post_id', 'order' => 'DESC']); ?>
                         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                             <?php get_template_part( 'template-parts/content-testimonial', 'testimonial' ); ?>
                         <?php endwhile; ?>
