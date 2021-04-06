@@ -51,6 +51,7 @@ get_header();
             <?php endif; ?>
         </div>
 
+        <?php if (count($loop->posts) > 1): ?>
         <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo get_the_post_thumbnail_url($parent_page->ID, 'full'); ?>" data-ios-fix="true" data-android-fix="true">
             <div class="row">
                 <div class="col">
@@ -61,6 +62,7 @@ get_header();
                 </div>
             </div>
         </div>
+        <?php endif; ?>
 
         <div class="container">
             <div class="row mb-5">

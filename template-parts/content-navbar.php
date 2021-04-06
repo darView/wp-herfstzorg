@@ -2,7 +2,7 @@
 
     <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
 <!--        HerfstZorg-->
-        <img src="<?php bloginfo('template_directory'); ?>/assets/img/navbar_logo.png" alt="HerfstZorg"/>
+        <img width="41" height="41" src="<?php bloginfo('template_directory'); ?>/assets/img/navbar_logo.png" alt="HerfstZorg"/>
     </a>
 
     <button class="navbar-toggler"

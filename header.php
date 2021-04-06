@@ -39,7 +39,7 @@ $cta_action = get_field('cta_action');
         <div class="container">
             <div class="row">
                 <div class="col-md-4 offset-md-4 text-center">
-                    <img class="company-logo mt-2" src="<?php bloginfo('template_directory'); ?>/assets/img/head-logo.png" alt="HerfstZorg"/>
+                    <img width="350" height="127" class="company-logo mt-2" src="<?php bloginfo('template_directory'); ?>/assets/img/head-logo.png" alt="HerfstZorg"/>
                 </div>
                 <?php if (strlen($cta_phrase)) { ?>
                     <div class="col-md-4 text-center">
