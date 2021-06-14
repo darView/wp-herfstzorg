@@ -27,7 +27,7 @@ $loop = new WP_Query([
         <div class="container mb-2">
             <div class="blog-header">
                 <span>
-                    <i class="fa fa-clock-o"></i><time><?php the_date(); ?></time>
+<!--                    <i class="fa fa-clock-o"></i><time>--><?php //the_date(); ?><!--</time>-->
                     <span class="categorie"><?php the_field('categorie'); ?></span>
                 </span>
             </div>

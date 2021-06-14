@@ -18,9 +18,9 @@ if (!strlen(trim($titel))) {
         <div class="card mt-4">
             <div class="card-img">
                 <?php the_post_thumbnail('medium_large', ['class' => 'card-img-top img-fluid img-tension']); ?>
-                  <div class="card-meta top-left">
-                    <i class="fa fa-clock-o"></i><time><?php echo get_the_date(); ?></time>
-                </div>
+<!--                  <div class="card-meta top-left">-->
+<!--                    <i class="fa fa-clock-o"></i><time>--><?php //echo get_the_date(); ?><!--</time>-->
+<!--                </div>-->
                 <div class="card-header centered">
                     <?php echo $titel; ?>
                 </div>
